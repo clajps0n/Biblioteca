@@ -14,7 +14,8 @@ import persistencia.entitad.LibroEntity;
 import persistencia.entitad.PrestamoEntity;
 import persistencia.repositorio.jpa.RepositorioLibroJPA;
 
-public class RepositorioPrestamoPersistente implements RepositorioPrestamo {
+public class RepositorioPrestamoPersistente implements RepositorioPrestamo 
+{
 
 	private static final String ISBN = "isbn";
 	private static final String PRESTAMO_FIND_BY_ISBN = "Prestamo.findByIsbn";
@@ -72,8 +73,12 @@ public class RepositorioPrestamoPersistente implements RepositorioPrestamo {
 
 		PrestamoEntity prestamoEntity = obtenerPrestamoEntityPorIsbn(isbn);
 
-		return new Prestamo(prestamoEntity.getFechaSolicitud(),
-				LibroBuilder.convertirADominio(prestamoEntity.getLibro()), prestamoEntity.getFechaEntregaMaxima(),
-				prestamoEntity.getNombreUsuario());
+		return new Prestamo
+				(
+					prestamoEntity.getFechaSolicitud(),
+					LibroBuilder.convertirADominio(prestamoEntity.getLibro()), 
+					prestamoEntity.getFechaEntregaMaxima(),
+					prestamoEntity.getNombreUsuario()
+				);
 	}
 }
