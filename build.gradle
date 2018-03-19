@@ -1,19 +1,31 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'jacoco'
+apply plugin: 'org.sonarqube' version '7.0'
 
-jar {
+jar 
+{
 	baseName = 'biblioteca'
 	version = '0.0.1-SNAPSHOT'
 }
 
 sourceCompatibility = 1.8
 
-repositories {
+repositories 
+{
 	mavenCentral()
 }
 
+sonarqube
+{
+	properties
+	{
+	property 'sonar.jacoco.reportPath', 'build/jacoco/test.exec'
+	}
+}
 
-dependencies {
+dependencies 
+{
 	  compile 'log4j:log4j:1.2.17'
 	  compile 'com.h2database:h2:1.4.194'	
 	  compile 'org.hibernate:hibernate-core:5.2.9.Final'	
