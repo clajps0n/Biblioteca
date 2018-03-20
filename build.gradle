@@ -31,10 +31,6 @@ jacocoTestReport {
     }
 }
 
-task applicationCodeCoverageReport(type:JacocoReport){
-    executionData run
-    sourceSets sourceSets.main
-}
 
 dependencies 
 {
