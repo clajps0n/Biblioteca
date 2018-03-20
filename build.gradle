@@ -15,11 +15,30 @@ repositories
 	mavenCentral()
 }
 
+test {
+    jacoco {
+        append = false
+        destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+        classDumpDir = file("$buildDir/jacoco/classpathdumps")
+    }
+}
 
-jacoco 
-{
-    toolVersion = "0.8.0"
-    reportsDir = file("path")
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+}
+
+
+jacoco {
+    applyTo run
+}
+
+task applicationCodeCoverageReport(type:JacocoReport){
+    executionData run
+    sourceSets sourceSets.main
 }
 
 dependencies 
