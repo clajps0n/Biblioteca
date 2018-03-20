@@ -16,6 +16,12 @@ repositories
 }
 
 
+jacoco 
+{
+    toolVersion = "0.8.0"
+    reportsDir = file("path")
+}
+
 dependencies 
 {
 	  compile 'log4j:log4j:1.2.17'
