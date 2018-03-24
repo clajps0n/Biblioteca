@@ -29,7 +29,7 @@ public class PrestamoEntity {
 	private String nombreUsuario;
 	
 	public Long getId() {
-		return id;
+		return this.id;
 	}
 	
 	public void setId(Long id) {
@@ -37,7 +37,7 @@ public class PrestamoEntity {
 	}
 	
 	public LibroEntity getLibro() {
-		return libro;
+		return this.libro;
 	}
 	
 	public void setLibro(LibroEntity libroEntity) {
@@ -45,7 +45,7 @@ public class PrestamoEntity {
 	}
 	
 	public Date getFechaSolicitud() {
-		return fechaSolicitud;
+		return this.fechaSolicitud;
 	}
 	
 	public void setFechaSolicitud(Date fechaSolicitud) {
@@ -53,10 +53,10 @@ public class PrestamoEntity {
 	}
 	
 	public Date getFechaEntregaMaxima() {
-		return fechaEntregaMaxima;
+		return this.fechaEntregaMaxima;
 	}
 	
 	public String getNombreUsuario() {
-		return nombreUsuario;
+		return this.nombreUsuario;
 	}
 }

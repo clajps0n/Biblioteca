@@ -9,12 +9,14 @@ public class Prestamo {
 	private Date fechaEntregaMaxima;
 	private String nombreUsuario;
 
-	public Prestamo(Libro libro) {
+	public Prestamo(Libro libro) 
+	{
 		this.fechaSolicitud = new Date();
 		this.libro = libro;
 	}
 	
-	public Prestamo(Date fechaSolicitud, Libro libro, Date fechaEntregaMaxima, String nombreUsuario) {
+	public Prestamo(Date fechaSolicitud, Libro libro, Date fechaEntregaMaxima, String nombreUsuario) 
+	{
 		this.fechaSolicitud = fechaSolicitud;
 		this.libro = libro;
 		this.fechaEntregaMaxima = fechaEntregaMaxima;

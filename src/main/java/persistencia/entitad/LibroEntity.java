@@ -25,7 +25,7 @@ public class LibroEntity {
 	private Integer anio;
 
 	public Long getId() {
-		return id;
+		return this.id;
 	}
 
 	public void setId(Long id) {
@@ -33,7 +33,7 @@ public class LibroEntity {
 	}
 
 	public String getIsbn() {
-		return isbn;
+		return this.isbn;
 	}
 
 	public void setIsbn(String isbn) {
@@ -41,7 +41,7 @@ public class LibroEntity {
 	}
 
 	public String getTitulo() {
-		return titulo;
+		return this.titulo;
 	}
 
 	public void setTitulo(String titulo) {
@@ -53,6 +53,6 @@ public class LibroEntity {
 	}
 
 	public Integer getAnio() {
-		return anio;
+		return this.anio;
 	}
 }

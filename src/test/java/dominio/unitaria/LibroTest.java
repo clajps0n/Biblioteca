@@ -7,15 +7,16 @@ import org.junit.Test;
 import dominio.Libro;
 import testdatabuilder.LibroTestDataBuilder;
 
-public class LibroTest {
+public class LibroTest 
+{
 
 	private static final int ANIO = 2010;
 	private static final String ISBN = "1234";
 	private static final String NOMBRE_LIBRO = "Cien años de soledad";
 
 	@Test
-	public void crearLibroTest() {
-		
+	public void crearLibroTest() 
+	{		
 		// arrange
 		LibroTestDataBuilder libroTestDataBuilder = new LibroTestDataBuilder().
 				conTitulo(NOMBRE_LIBRO).
