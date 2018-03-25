@@ -132,20 +132,15 @@ public class BibliotecarioTest
 		
 		Calendar myCal = Calendar.getInstance();
 		myCal.set(Calendar.YEAR, 2018);
-		myCal.set(Calendar.MONTH, 3);
+		myCal.set(Calendar.MONTH, 2);   				//JANUARY = 0, MARCH = 2
 		myCal.set(Calendar.DAY_OF_MONTH, 24);
 		Date fechaSolicitud = myCal.getTime();
 				
-		myCal.set(Calendar.MONTH, 4);
+		myCal.set(Calendar.MONTH, 3);					//JANUARY = 0, APRIL = 3
 		myCal.set(Calendar.DAY_OF_MONTH, 10);
 		Date fechaEntregaEsperada = myCal.getTime();
 				
 		Date fechaEntregaCalculada = bibliotecario.calcularFechaEntrega(31, fechaSolicitud);
-				
-		System.out.println("fechaSolicitud: "+fechaSolicitud);
-		System.out.println("fechaEntregaEsperada: "+fechaEntregaEsperada);
-		System.out.println("fechaEntregaCalculada: "+fechaEntregaCalculada);
-		
 		
 		//assert
 		assertNotNull(fechaEntregaCalculada);
@@ -163,19 +158,15 @@ public class BibliotecarioTest
 		
 		Calendar myCal = Calendar.getInstance();
 		myCal.set(Calendar.YEAR, 2018);
-		myCal.set(Calendar.MONTH, 3);
+		myCal.set(Calendar.MONTH, 2);				//JANUARY = 0
 		myCal.set(Calendar.DAY_OF_MONTH, 23);
 		Date fechaSolicitud = myCal.getTime();
 				
-		myCal.set(Calendar.MONTH, 4);
+		myCal.set(Calendar.MONTH, 3);				//JANUARY = 0
 		myCal.set(Calendar.DAY_OF_MONTH, 9);
 		Date fechaEntregaEsperada = myCal.getTime();
 				
 		Date fechaEntregaCalculada = bibliotecario.calcularFechaEntrega(31, fechaSolicitud);
-				
-		System.out.println("fechaSolicitud: "+fechaSolicitud);
-		System.out.println("fechaEntregaEsperada: "+fechaEntregaEsperada);
-		System.out.println("fechaEntregaCalculada: "+fechaEntregaCalculada);
 				
 		//assert
 		assertNotNull(fechaEntregaCalculada);
@@ -183,7 +174,7 @@ public class BibliotecarioTest
 	}
 	
 	@Test
-	public void calcularFechaEntregaNull() throws ParseException
+	public void calcularFechaEntregaNullTest() throws ParseException
 	{
 		// arrange		
 		RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
